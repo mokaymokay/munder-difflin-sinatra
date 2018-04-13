@@ -359,26 +359,6 @@ footer {
 
 /* animations */
 
-.faded {
-  opacity: 0.5;
-}
-
-.show {	animation: show 300ms forwards; }
-
-@keyframes show {
-	from {	opacity: 0.7; }
-	to {	opacity: 1; }
-}
-
-.fade {
-	animation: fade 300ms forwards;
-}
-
-@keyframes fade {
-  from {	opacity: 1; }
-	to {	opacity: 0.7; }
-}
-
 .flicker-in-1 {
 	animation: flicker-in-1 2s linear 300ms both;
 }

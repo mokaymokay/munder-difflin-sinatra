@@ -2,17 +2,29 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 get '/' do
-  redirect '/index.html'
+  erb :index
 end
 
-get '/about-us' do
-  redirect '/index.html#about-us'
+get '/about' do
+  erb :about_us
 end
 
-get '/contact' do
-  redirect '/index.html'
+get '/testimonials' do
+  erb :testimonials
 end
 
-get '/staff' do
-  redirect '/index.html#team'
+get '/team' do
+  erb :team
+end
+
+get '/team/:name' do
+  if params[:name] == "andy"
+    erb :andy
+  elsif params[:name] == "dwight"
+    erb :dwight
+  elsif params[:name] == "jim"
+    erb :jim
+  else
+    erb :michael
+  end
 end
