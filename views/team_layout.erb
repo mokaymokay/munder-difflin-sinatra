@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../main.css">
+    <title>Munder Difflin – Scranton's Favorite Paper Company</title>
+  </head>
+  <body>
+
+    <nav class="fixed-nav-bar">
+      <a href="/"><img id="md-logo" src="../images/md-logo.jpg" alt="Munder Diffin's company logo"></a>
+      <a class="nav-element hvr-underline-from-center" href="/team">Our Team</a>
+      <a class="nav-element hvr-underline-from-center" href="/about">Our Philosophy</a>
+      <a class="nav-element hvr-underline-from-center" href="/testimonials">Client Testimonials</a>
+      <h4 class="nav-element">(570) 520-2020</h4>
+    </nav>
+
+<section id="team">
+  <div id="team-top">
+    <h1 class="section-title">The Munder Difflin Family</h1>
+    <h2 class="section-subtitle">We are the People Person Paper People</h2>
+  </div>
+  <div id="team-bottom">
+    <figure id="team-photo-section">
+      <img id="team-photo" src="../images/office-cast.jpg" alt="Cast of The Office">
+      <figcaption id="team-photo-caption">Credit: The Office - NBC</caption>
+    </figure>
+    <ul id="team-list">
+      <li>Sales Team</li>
+        <ul class="member-list">
+          <a href="/team/jim"><li>Jim Halpert</li></a>
+          <a href="/team/dwight"><li>Dwight Schrute</li></a>
+          <li>Pam Beesly</li>
+          <li>Phyllis Lapin</li>
+          <a href="/team/andy"><li>Andy Bernard</li></a>
+          <li>Stanley Hudson</li>
+        </ul>
+      </li>
+      <li>Manager</li>
+        <ul class="member-list">
+          <a href="/team/michael"><li>Michael Scott</li></a>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div id="selected-staff">
+    <%= yield %>
+  </div>
+
+</section>
+
+</body>
+</html>
