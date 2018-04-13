@@ -15,7 +15,7 @@ get '/testimonials' do
 end
 
 get '/team' do
-  erb :team
+  erb :group, :layout => :team_layout
 end
 
 get '/team/:name' do
@@ -26,10 +26,12 @@ get '/team/:name' do
     @jim = Staff.new('Jim Halpert', '/images/staff/jim.jpg', 'Salesman', 'Office Prankster')
     erb :jim, :layout => :team_layout
   elsif params[:name] == "andy"
-    @andy = Staff.new('Andy Bernard', '/images/staff/andy.jpg', 'Salesman', 'The Nard Dog. Proud Cornell Graduate.')
+    @andy = Staff.new('Andy Bernard', '/images/staff/andy.jpg', 'Salesman', 'Nard Dog. Proud Cornell Graduate.')
     erb :andy, :layout => :team_layout
-  else
+  elsif params[:name] == "michael"
     @michael = Staff.new('Michael Scott', '/images/staff/michael.jpg', 'Regional Manager', "World's Best Boss")
     erb :michael, :layout => :team_layout
+  else
+    erb :group, :layout => :team_layout
   end
 end

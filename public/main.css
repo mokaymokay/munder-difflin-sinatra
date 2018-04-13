@@ -232,8 +232,6 @@ h5 {
   width: 80%;
   padding: 0 5%;
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 #team-photo {
@@ -243,9 +241,6 @@ h5 {
 }
 
 #team-photo-section {
-  padding: 2%;
-  display: flex;
-  flex-direction: column;
   width: 60%;
 }
 
@@ -263,6 +258,11 @@ li {
   font-size: 1.5em;
   padding: 5px;
   color: var(--gunmetal);
+}
+
+h2 {
+  font-weight: bold;
+  color: var(--electric-blue);
 }
 
 #selected-staff {
@@ -381,6 +381,24 @@ footer {
    85.1% { opacity: 0; } 86%   { opacity: 0; } 86.1% { opacity: 1; }
    100%  { opacity: 1; }
  }
+
+ .flip-in-ver-right {
+ 	-webkit-animation: flip-in-ver-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+ 	        animation: flip-in-ver-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+ }
+
+@keyframes flip-in-ver-right {
+  0% {
+    -webkit-transform: rotateY(-80deg);
+            transform: rotateY(-80deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    opacity: 1;
+  }
+}
 
 /* Underline From Center */
 .hvr-underline-from-center {
