@@ -2,6 +2,11 @@ require 'sinatra'
 require 'sinatra/reloader'
 require_relative 'team'
 
+set :port, 8080
+set :static, true
+set :public_folder, "public" # default
+set :views, "views" # default
+
 get '/' do
   erb :index, :layout => :home_layout
 end
